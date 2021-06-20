@@ -36,39 +36,37 @@ class TestCollatz (TestCase):
     # ----
     # eval
     # ----
-
-       # collatz_eval_1 uses memoization optimization
+    
+    # collatz_eval_1 uses memoization optimization
     def test_eval_1(self):
         a = collatz_eval(1, 10)
         self.assertEqual(a, 20)
+        
+        b = collatz_eval(900, 1000)
+        self.assertEqual(b, 174)
+
+        c = collatz_eval(1, 100000)
+        self.assertEqual(c, 351)
 
     def test_eval_2(self):
         a = collatz_eval(100, 200)
         self.assertEqual(a, 125)
 
+        b = collatz_eval(10, 1)
+        self.assertEqual(b, 20)
+
+        c = collatz_eval(1, 1)
+        self.assertEqual(c, 1)
+
     def test_eval_3(self):
         a = collatz_eval(201, 210)
         self.assertEqual(a, 89)
 
-    def test_eval_4(self):
-        a = collatz_eval(900, 1000)
-        self.assertEqual(a, 174)
+        b = collatz_eval(10, 10)
+        self.assertEqual(b, 7)
 
-    def test_eval_5(self):
-        a = collatz_eval(1, 100000)
-        self.assertEqual(a, 351)
-
-    def test_eval_6(self):
-        a = collatz_eval(10, 1)
-        self.assertEqual(a, 20)
-
-    def test_eval_7(self):
-        a = collatz_eval(1, 1)
-        self.assertEqual(a, 1)
-
-    def test_eval_8(self):
-        a = collatz_eval(10, 10)
-        self.assertEqual(a, 7)
+        c = collatz_eval(500, 101)
+        self.assertEqual(c, 144)
 
     # -----
     # print
